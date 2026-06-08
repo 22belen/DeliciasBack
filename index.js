@@ -15,4 +15,34 @@ sequelize.sync({}).then(() => {
   console.log("Tablas sincronizadas correctamente.");
 });
 
+app.get("/productos", async (req, res) => {
+  const productos = await Producto.findAll();
+  res.json(productos);
+});
+
+app.get("/productos/:id", async (req, res) => {
+  const { id } = req.params;
+  const producto = await Producto.findByPk(id);
+  res.json(producto);
+});
+
+app.post("/productos", verificarToken, async (req, res) => {
+  const { nombre, descripcion, precio } = req.body;
+  await Producto.create({ nombre, descripcion, precio });
+  res.json({ mensaje: "¡Producto agregado correctamente!" });
+});
+
+app.patch("/productos/:id", verificarToken, async (req, res) => {
+  const { id } = req.params;
+  const { nombre, descripcion, precio } = req.body;
+  await Producto.update({ nombre, descripcion, precio }, { where: { id } });
+  res.json({ mensaje: "¡Producto actualizado correctamente!" });
+});
+
+app.delete("/productos/:id", verificarToken, async (req, res) => {
+  const { id } = req.params;
+  await Producto.destroy({ where: { id } });
+  res.json({ mensaje: "Producto eliminado con éxito." });
+});
+
 app.listen(8000, console.log("https//localhost:8000"));
