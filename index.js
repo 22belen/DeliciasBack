@@ -11,8 +11,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-sequelize.sync({}).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log("Tablas sincronizadas correctamente.");
+});
+
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  const usuario = await Usuario.findOne({ where: { email } });
+
+  if (!usuario) {
+    return res.status(401).json({ mensaje: "Credenciales incorrectas" });
+  }
+
+  const coincide = await bcrypt.compare(password, usuario.password);
+
+  if (!coincide) {
+    return res.status(401).json({ mensaje: "Credenciales incorrectas" });
+  }
+
+  const token = jwt.sign(
+    { id: usuario.id, email: usuario.email },
+    process.env.JWT_SECRET,
+    { expiresIn: "1h" },
+  );
+
+  res.json({ token });
 });
 
 app.get("/productos", async (req, res) => {
