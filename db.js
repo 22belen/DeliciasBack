@@ -10,6 +10,7 @@ Usuario.init(
     email: DataTypes.STRING,
     rol: DataTypes.STRING,
     password: DataTypes.STRING,
+    admin: DataTypes.BOOLEAN,
   },
   { sequelize, modelName: "usuario" },
 );
