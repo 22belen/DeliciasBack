@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const { sequelize, Usuario, Producto } = require("./db");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
   console.log("Tablas sincronizadas correctamente.");
 });
 

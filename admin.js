@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { sequelize, Usuario } = require("./db");
 
 const crearAdmin = async () => {
