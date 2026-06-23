@@ -19,6 +19,7 @@ class Producto extends Model {}
 Producto.init(
   {
     nombre: DataTypes.STRING,
+    imagen: DataTypes.STRING,
     descripcion: DataTypes.TEXT,
     precio: DataTypes.STRING,
   },
