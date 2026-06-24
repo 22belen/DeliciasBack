@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-sequelize.sync().then(() => {
+sequelize.sync({}).then(() => {
   console.log("Tablas sincronizadas correctamente.");
 });
 
@@ -66,15 +66,18 @@ app.get("/productos/:id", async (req, res) => {
 });
 
 app.post("/productos", verificarToken, async (req, res) => {
-  const { nombre, descripcion, precio } = req.body;
-  await Producto.create({ nombre, descripcion, precio });
+  const { nombre, descripcion, precio, imagen } = req.body;
+  await Producto.create({ nombre, descripcion, precio, imagen });
   res.json({ mensaje: "¡Producto agregado correctamente!" });
 });
 
 app.patch("/productos/:id", verificarToken, async (req, res) => {
   const { id } = req.params;
-  const { nombre, descripcion, precio } = req.body;
-  await Producto.update({ nombre, descripcion, precio }, { where: { id } });
+  const { nombre, descripcion, precio, imagen } = req.body;
+  await Producto.update(
+    { nombre, descripcion, precio, imagen },
+    { where: { id } },
+  );
   res.json({ mensaje: "¡Producto actualizado correctamente!" });
 });
 
