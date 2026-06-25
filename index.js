@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-sequelize.sync({}).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log("Tablas sincronizadas correctamente.");
 });
 
