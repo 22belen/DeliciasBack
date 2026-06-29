@@ -22,6 +22,7 @@ Producto.init(
     imagen: DataTypes.STRING,
     descripcion: DataTypes.TEXT,
     precio: DataTypes.STRING,
+    categoria: DataTypes.STRING,
   },
   { sequelize, modelName: "producto" },
 );
