@@ -18,6 +18,7 @@ const seed = async () => {
         "Doble smash, cheddar, panceta crocante y cebolla caramelizada",
       precio: 480,
       imagen: "/ImgProductos/Cheeseburger.jpeg",
+      categoria: "hamburguesa",
     },
     {
       nombre: "Hamburguesa Criolla",
@@ -25,6 +26,7 @@ const seed = async () => {
         "Doble smash, queso provolone, huevo frito y cebolla caramelizada",
       precio: 510,
       imagen: "/ImgProductos/Criolla.jpeg",
+      categoria: "hamburguesa",
     },
     {
       nombre: "Hamburguesa Smash BBQ",
@@ -32,6 +34,7 @@ const seed = async () => {
         "Doble smash, cheddar, panceta crocante, cebolla caramelizada y salsa BBQ",
       precio: 460,
       imagen: "/ImgProductos/SmashBBQ.jpeg",
+      categoria: "hamburguesa",
     },
     {
       nombre: "Hamburguesa Smash Clásica",
@@ -39,6 +42,7 @@ const seed = async () => {
         "Doble smash, cheddar, panceta crocante y cebolla caramelizada",
       precio: 430,
       imagen: "/ImgProductos/SmashClasica.jpeg",
+      categoria: "hamburguesa",
     },
     {
       nombre: "Empanada Cheeseburger",
@@ -46,6 +50,7 @@ const seed = async () => {
         "Carne y cheddar fundido con todo el sabor de una clásica cheeseburger.",
       precio: 90,
       imagen: "/ImgProductos/Emp.Cheeseburger.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Empanada Criolla",
@@ -53,6 +58,7 @@ const seed = async () => {
         "Carne, cebolla, morrón y huevo duro en la clásica combinación criolla.",
       precio: 95,
       imagen: "/ImgProductos/Emp.CarneCriolla.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Empanada de Pollo",
@@ -60,30 +66,35 @@ const seed = async () => {
         "Pollo desmenuzado y cebolla en una combinación suave y sabrosa.",
       precio: 90,
       imagen: "/ImgProductos/Emp.Pollo.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Empanada de Queso y Cebolla",
       descripcion: "Cebolla salteada en manteca, orégano y mucho queso",
       precio: 90,
       imagen: "/ImgProductos/Emp.Quesoycebolla.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Empanada de Jamón y Queso",
       descripcion: "Jamón y queso fundido",
       precio: 85,
       imagen: "/ImgProductos/Emp.Jamonyqueso.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Empanada de Espinaca y Queso",
       descripcion: "Espinaca y queso fundido",
       precio: 90,
       imagen: "/ImgProductos/Emp.Espinacayqueso.jpeg",
+      categoria: "empanada",
     },
     {
       nombre: "Papas Fritas",
       descripcion: "Porción de papas fritas crocantes",
       precio: 180,
       imagen: "/ImgProductos/Fritas.jpeg",
+      categoria: "acompañamiento",
     },
     {
       nombre: "Papas Fritas con cheddar y bacon",
@@ -91,6 +102,7 @@ const seed = async () => {
         "Porción de papas fritas crocantes con salsa cheddar y bacon salteado",
       precio: 320,
       imagen: "/ImgProductos/FritasCB.jpeg",
+      categoria: "acompañamiento",
     },
   ]);
 
