@@ -125,6 +125,20 @@ const seed = async () => {
       imagen: "/ImgProductos/PromoFamilia.jpeg",
       categoria: "promo",
     },
+    {
+      nombre: "Promo Solari",
+      descripcion: "Burger a elección + fritas + bebida 600ml ",
+      precio: 550,
+      imagen: "/ImgProductos/PromoSolari.jpeg",
+      categoria: "promo",
+    },
+    {
+      nombre: "Promo de Empanadas",
+      descripcion: "Una para cada momento que se te presenta",
+      precio: "",
+      imagen: "/ImgProductos/PromoEmpanadas.jpeg",
+      categoria: "promo",
+    },
   ]);
 
   console.log("¡Datos cargados correctamente!");
