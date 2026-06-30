@@ -139,6 +139,13 @@ const seed = async () => {
       imagen: "/ImgProductos/PromoEmpanadas.jpeg",
       categoria: "promo",
     },
+    {
+      nombre: "Bebidas",
+      descripcion: "Elegí el sabor que queres que te acompañe",
+      precio: "",
+      imagen: "/ImgProductos/Bebidas.jpeg",
+      categoria: "bebida",
+    },
   ]);
 
   console.log("¡Datos cargados correctamente!");
