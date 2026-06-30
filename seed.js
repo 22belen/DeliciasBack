@@ -104,6 +104,27 @@ const seed = async () => {
       imagen: "/ImgProductos/FritasCB.jpeg",
       categoria: "acompañamiento",
     },
+    {
+      nombre: "Promo Big 3",
+      descripcion: "3 burgers a elección + fritas + bebida de 1,5lts",
+      precio: 1320,
+      imagen: "/ImgProductos/PromoBig3.jpeg",
+      categoria: "promo",
+    },
+    {
+      nombre: "Promo Duo",
+      descripcion: "2 burgers a elección + fritas + 2 bebidas de 600ml",
+      precio: 990,
+      imagen: "/ImgProductos/Promoduo.jpeg",
+      categoria: "promo",
+    },
+    {
+      nombre: "Promo Familia",
+      descripcion: "4 burgers a elección + fritas + bebida de 2,25lts ",
+      precio: 1690,
+      imagen: "/ImgProductos/PromoFamilia.jpeg",
+      categoria: "promo",
+    },
   ]);
 
   console.log("¡Datos cargados correctamente!");
